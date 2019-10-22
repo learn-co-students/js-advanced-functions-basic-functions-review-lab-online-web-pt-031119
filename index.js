@@ -29,18 +29,17 @@ let Calculator = {
   // };
 };
 
-function actionApplyer(startingInteger, arrayOfFunctions) {
-  if (arrayOfFunctions = []) {
-    return startingInteger
-  } else {
-    let arrayOfFunctions = [
-      (function(){ return 13 * 2})
-      (function(){ return 13 + 1000})
-      (function(startingInteger){ return 13 % 7})
-    ]
-    return actionApplyer(13, arrayOfFunctions);
+let actionApplyer = function(startingInteger, array) {
+  let a = startingInteger;
+
+  for (let i = 0; i < array.length; i++){
+    a = array[i](a)
   }
+
+  return a
 };
+
+
 
 
 // function demoChain(name) {
