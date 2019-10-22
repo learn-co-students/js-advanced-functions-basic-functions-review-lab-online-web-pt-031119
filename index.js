@@ -19,12 +19,6 @@ const Calculator = {
     divide: (a, b) => a / b
 }
 
-// arrayOfTransforms = [
-//     function(a){ return a * 2 },
-//     function(a){ return a + 1000},
-//     function(a){ return a % 7 }
-//   ]
-
 let actionApplyer = function(int, arr) {
     if (arr.length === 0) {
         return int
