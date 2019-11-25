@@ -1,41 +1,40 @@
 // Your code here
 
 function saturdayFun(activity = "roller-skate") {
-    return (`This Saturday, I want to ${activity}!`);
+ return `This Saturday, I want to ${activity}!`
 }
 
 function mondayWork(activity = "go to the office") {
-    return (`This Monday, I will ${activity}.`);
+    return `This Monday, I will ${activity}.`
 }
 
-function wrapAdjective(character = "*") {
-    return function (adjective = "special") {
-        return (`You are ${character}${adjective}${character}!`);
-    };
+function wrapAdjective(flair = "*") {
+    return function(me = "special") {
+        return `You are ${flair}${me}${flair}!`
+  }
 }
 
-let Calculator = {
-    add: function (a, b) {
-        return a + b
+let Calculator =  {
+    add(a,b) {
+       return a + b;
     },
-    subtract: function (a, b) {
+    subtract(a,b) {
         return a - b
     },
-    multiply: function (a, b) {
+    multiply(a,b) {
         return a * b
     },
-    divide: function (a, b) {
-        return a / b
-    },
-};
-
-
-let actionApplyer = function (start, ray) {
-    let a = start
-
-    for (let i = 0; i < ray.length; i++) {
-        a = ray[i](a)
+    divide(a,b) {
+        return a / b 
     }
-
-    return a
 }
+
+let actionApplyer = function(start, ray) {
+    let a = start
+  
+    for (let i = 0; i < ray.length; i++ ){
+      a = ray[i](a)
+    }
+  
+    return a
+  }
